@@ -458,11 +458,6 @@ void *kUserDataHint = &kUserDataHint;
                 event = nil;
             }
 
-            // If the shortcut is Cmd-W or Cmd-Q, cancel recording and pass the event through
-            else if ((shortcut.modifierFlags == NSCommandKeyMask) && (shortcut.keyCode == kVK_ANSI_W || shortcut.keyCode == kVK_ANSI_Q)) {
-                weakSelf.recording = NO;
-            }
-
             else {
                 // Verify possible shortcut
                 if (shortcut.keyCodeString.length > 0) {
